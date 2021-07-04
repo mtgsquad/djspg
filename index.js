@@ -4,18 +4,19 @@ const sleep = require("./functions/sleep");
 
 const { execSync } = require("child_process"),
   { existsSync, rmSync } = require("fs"),
-  { resolve } = require("path"),
   quit = require("./functions/quit"),
   prompt = require("prompts"),
-  execOpts = { encoding: "utf8", shell: true },
-  exec = (command, opts) => execSync(command, { ...opts, ...execOpts }),
+  execOpts = { encoding: "utf8", shell: true, cwd: process.cwd() },
+  exec = (command, opts) => execSync(command, { ...execOpts, ...opts }),
   chalk = require("chalk"),
   blurple = chalk.hex("#7289DA"),
   error = chalk.red,
   info = chalk.blue;
 
 (async () => {
-  console.log(blurple(`\nDJSPG v${require("./package.json").version}\n\n`));
+  console.log(
+    blurple(`\nDJSPG v${require(`${__dirname}/package.json`).version}\n\n`)
+  );
 
   sleep(3000);
 
@@ -45,14 +46,14 @@ const { execSync } = require("child_process"),
     `git clone https://github.com/mtgsquad/simple-discord-bot-project.git ${args[0]}`
   );
   console.log();
-  exec(`cd ${args[0]}`);
+
   console.log(
     info(
       `Installing ${Object.keys(
-        require(`./${args[0]}/package.json`).dependencies
+        require(`${process.cwd()}/${args[0]}/package.json`).dependencies
       ).join(", ")}`
     )
   );
-  exec(`npm install --prefix ${args[0]}`);
+  exec("npm install", { cwd: `${process.cwd()}/${args[0]}` });
   require("./prompt")(args[0]);
 })();
