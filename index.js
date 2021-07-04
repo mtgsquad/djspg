@@ -40,10 +40,6 @@ const { execSync } = require("child_process"),
       : quit("");
 
   exec(`mkdir ${args[0]}`);
-  if (args.length === 2) {
-    console.log(info("Cloning Your Custom Repository..."));
-    exec(`git clone ${args[1]} ${args[0]}`);
-  }
   console.log(info("Cloning The Starter Repository..."));
   exec(
     `git clone https://github.com/mtgsquad/simple-discord-bot-project.git ${args[0]}`
