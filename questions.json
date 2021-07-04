@@ -1,0 +1,12 @@
+[
+  {
+    "type": "text",
+    "name": "token",
+    "message": "Your Bot's Token?"
+  },
+  {
+    "type": "text",
+    "name": "prefix",
+    "message": "Your Bot's Prefix?"
+  }
+]
