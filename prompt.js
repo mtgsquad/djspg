@@ -1,5 +1,5 @@
 const prompts = require("prompts");
-const { questions } = require("./config.json");
+const questions = require("./questions.json");
 const fs = require("fs");
 module.exports = async (arg0) => {
   fs.writeFileSync(

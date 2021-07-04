@@ -13,6 +13,7 @@
   "author": "MTGSquad",
   "license": "MIT",
   "dependencies": {
+    "chalk": "^4.1.1",
     "prompts": "^2.3.0"
   }
 }
