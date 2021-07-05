@@ -1,6 +1,6 @@
 {
   "name": "djspg",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "description": "A Discord.JS Project Generator",
   "main": "index.js",
   "bin": {
@@ -10,7 +10,7 @@
     "start": "djspg",
     "lint": "prettier --write ."
   },
-  "author": "MTGSquad",
+  "author": "Mahir Molai",
   "license": "MIT",
   "dependencies": {
     "chalk": "^4.1.1",
