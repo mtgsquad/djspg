@@ -8,5 +8,10 @@
     "type": "text",
     "name": "prefix",
     "message": "Your Bot's Prefix?"
+  },
+  {
+    "type": "text",
+    "name": "activity",
+    "message": "Your bot's playing status?"
   }
 ]

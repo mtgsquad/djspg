@@ -1,6 +1,6 @@
 {
   "name": "djspg",
-  "version": "1.0.1",
+  "version": "1.0.3",
   "description": "A Discord.JS Project Generator",
   "main": "index.js",
   "bin": {

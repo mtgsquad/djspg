@@ -24,7 +24,7 @@ const { execSync } = require("child_process"),
 
   if (args.length === 0)
     return console.log(
-      error("No bot directory provided, make sure the directory exists.")
+      error("No directory provided.")
     );
 
   if (existsSync(args[0]))
@@ -41,7 +41,7 @@ const { execSync } = require("child_process"),
       : quit("");
 
   exec(`mkdir ${args[0]}`);
-  console.log(info("Cloning The Starter Repository..."));
+  console.log(info("Generating project..."));
   exec(
     `git clone https://github.com/mtgsquad/simple-discord-bot-project.git ${args[0]}`
   );
